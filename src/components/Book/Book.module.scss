@@ -1,0 +1,203 @@
+@import '../../styles/colors';
+
+.wrapper{
+    margin-top: 20px;
+}
+.arrow{
+    color: $secondary-color-no-gradient;
+}
+.back{
+    margin-left: 41px;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 12px;
+
+        width: 40px;
+        background: $secondary-color;
+        height: 1px;
+    }
+    a{
+        color: $black-color;
+    }
+}
+.authorName{
+    margin-left: 150px;
+    a{
+        color: $black-color;
+    }
+}
+.statistic div{
+    &, *{
+        font-size: 28px;
+    }
+    margin-right: 15px;
+}
+.mainInfo{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin-top: 40px;
+    @media (max-width: 992px) {
+        grid-template-columns: 100%;
+    }
+}
+.advertBlock{
+    border: 1px solid $first-color-no-gradient;
+}
+.bookImgWrapper{
+
+    max-width: 250px;
+    width: 100%;
+}
+.bookInfoWrapper{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 10px;
+}
+.isFinished{
+    span{
+        text-align: center;
+        display: inline-block;
+        padding: 2px 9px;
+        background: $gradient2;
+    }
+
+}
+.tags{
+    span{
+        display: inline-block;
+        padding: 2px 6px;
+        border: 1px solid $first-color-no-gradient;
+        color: $first-color-no-gradient;
+        margin-right: 7px;
+        margin-bottom: 7px;
+    }
+}
+.likeCount{
+    grid-column: 1 / -1;
+    &,*{
+        font-size: 20px;
+    }
+}
+.bookInfoText{
+    color: $first-color-no-gradient;
+}
+.contImg{
+    height: 0;
+    padding-bottom: 140%;
+    position: relative;
+
+    width: 100%;
+    img{
+        display: block;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+}
+
+.contImg:hover .photoEdit{
+    display: block;
+}
+.photoEdit{
+    display: none;
+    position: absolute;
+    opacity: 0.9;
+    width: 100%;
+
+}
+.buttonAnswer{
+    background: $bejeviy;
+}
+.photoEdit button{
+    font-size: 14px;
+    width: 100%;
+
+
+}
+.chapterTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.chapterTitle a{
+    color: $black-color
+}
+.chapterTitle a:hover{
+    color: $secondary-color-no-gradient;
+    text-decoration: underline;
+}
+.photoprofile{
+    width: 50px;
+    height: 50px;
+}
+.photoprofile img{
+    border-radius: 80%;
+    object-fit:cover;
+    width: 50px;
+    height: 50px;
+}
+
+.usernameCom{
+    font-size: 13px;
+    font-weight: bold;
+}
+.usernameCom a{
+    margin-right: 10px;
+}
+.usernameCom span{
+    display: inline-block;
+    font-weight: 400;
+    opacity: 0.8;
+}
+.textCom{
+    font-size: 17px;
+    font-style: italic;
+}
+.comWrap{
+
+}
+.commentsWrapper{
+    padding-bottom: 100px;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+.showAnswer,.hiddenAnswer{
+    color: #1a9aef;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.hiddenAnswer i {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.showAnswer i{
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+.answer{
+    color: $first-color-no-gradient;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.deleteCom{
+    color: red;
+    cursor: pointer;
+
+}
+.closeCom{
+    text-align: right;
+    font-size: 18px;
+    cursor: pointer;
+    color: $first-color-no-gradient;
+
+}
+
+

@@ -1,0 +1,43 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+
+.basicAdvertising, .top15main{
+  position: relative;
+  .slick-prev{
+    left: 40%;
+    @media (max-width: 500px) {
+      left: 35%;
+    }
+  }
+  .slick-next{
+    left: 55%;
+    @media (max-width: 500px) {
+      left: 55%;
+    }
+  }
+  .slick-prev, .slick-next{
+
+    top: auto;
+    right: auto;
+    bottom: -50px;
+    &::before, &::after{
+      font-size: 30px;
+      font-weight: bold;
+      color: $secondary-color-no-gradient;
+      font-family: $font-manrope;
+    }
+    @media (max-width: 500px) {
+      bottom: -30px;
+    }
+    @media (max-width: 350px) {
+      bottom: 0px;
+      z-index: 5;
+    }
+  }
+}
+.top15main{
+
+  .slick-prev, .slick-next{
+    bottom: -27px;
+  }
+}

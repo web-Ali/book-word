@@ -1,0 +1,229 @@
+@import '../../styles/colors';
+
+.chapterCont{
+    padding-top: 70px;
+    &.day{
+        &>div, h2{
+            background: $black-color;
+            color: $molochniy;
+        }
+        .rightMove, .leftMove{
+            color: $molochniy
+        }
+        .filter *{
+            color: $molochniy;
+            .sizeItems{
+                background: $black-color;
+            }
+        }
+
+    }
+}
+.readerContent{
+    min-height: 500px;
+    &.fz10{
+        *{
+            font-size: 10px;
+        }
+    }
+    &.fz12{
+        *{
+            font-size: 12px;
+        }
+    }
+    &.fz14{
+        *{
+            font-size: 14px;
+        }
+    }
+    &.fz16{
+        *{
+            font-size: 16px;
+        }
+    }
+    &.fz18{
+        *{
+            font-size: 18px;
+        }
+    }
+    &.fz20{
+        *{
+            font-size: 20px;
+        }
+    }
+    &.fz22{
+        *{
+            font-size: 22px;
+        }
+    }
+    &.fz24{
+        *{
+            font-size: 24px;
+        }
+    }
+    &.fz26{
+        *{
+            font-size: 26px;
+        }
+    }&.fz28{
+         *{
+             font-size: 28px;
+         }
+     }
+    &.fz30{
+        *{
+            font-size: 30px;
+        }
+    }
+
+}
+.nav {
+    background: $bejeviy;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    transition: all .3s ease;
+    .filter{
+        display: flex;
+        &>div{
+            margin-right: 50px;
+            font-size: 20px;
+            color: $first-color-no-gradient;
+        }
+
+        .sizeItems{
+
+            display: flex;
+            flex-direction: column;
+            margin-left: -60px;
+            background: $bejeviy;
+            font-size: 16px;
+            text-align: center;
+            border: 1px solid $first-color-no-gradient;
+            span:hover{
+                cursor: pointer;
+                color: $secondary-color-no-gradient
+            }
+        }
+    }
+    .galochka{
+
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+    @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        .filter{
+            margin-top: 10px;
+        }
+    }
+    @media (max-width: 650px) {
+        .navBtn{
+            &>*{
+                margin-top: 5px;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+        }
+    }
+}
+.nav.out {
+    transform: translateY(-100%);
+}
+.sidebare{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0, 0.5);
+    position: fixed;
+    transition: all .3s ease;
+    z-index: 5;
+}
+.sidebare.out{
+    background: rgba(0,0,0, 0);
+    transform: translateX(-100%);
+
+}
+.sidebarContent{
+    background: $molochniy;
+    max-width: 700px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+}
+.sidebarTitle{
+    padding: 20px;
+    position: relative;
+}
+.sidebarTitle img{
+    object-fit: cover;
+    width: 176px;
+    height: 260px;
+    border: 1px solid #cecece;
+    text-align: center;
+}
+.chapterimg{
+    text-align: center;
+}
+.sidebarTitle button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.sidebarTitle p{
+    text-align: center;
+    font-size: 24px;
+}
+.sidebarTitle h3{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+
+}
+.chapters{
+    padding-bottom: 20px;
+}
+.chapters div{
+    border-top: 1px solid lightgray;
+    padding: 7px 15px;
+    font-size: 24px;
+}
+.chapters .active{
+    background: $first-color;
+    color: #fff;
+}
+.chapters div:hover{
+    background: $first-color-no-gradient;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.chapters .active:hover{
+
+
+    cursor: default;
+}
+.move{
+
+    display: flex;
+    justify-content: space-between;
+}
+.rightMove, .leftMove{
+
+    font-size: 30px;
+}

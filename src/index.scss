@@ -1,0 +1,391 @@
+@import 'styles/fonts';
+@import 'styles/colors';
+
+body {
+  margin: 0;
+  font-family: $font-manrope;
+  background-color: $molochniy;
+}
+
+h1{
+  font-size: 64px;
+  font-weight: 700;
+
+  @media (max-width: 900px) {
+    font-size: 45px;
+  }
+  &.h3{
+    font-size: 40px;
+    font-weight: 700;
+    @media (max-width: 900px) {
+      font-size: 35px;
+    }
+  }
+}
+h2{
+  font-size: 48px;
+  font-weight: 700;
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
+}
+h3{
+  font-size: 40px;
+  font-weight: 700;
+  @media (max-width: 900px) {
+    font-size: 35px;
+  }
+}
+h4{
+  font-size: 36px;
+  font-weight: 700;
+  @media (max-width: 900px) {
+    font-size: 30px;
+  }
+}
+h5{
+  font-size: 30px;
+  font-weight: 700;
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
+}
+h6{
+  font-size: 24px;
+  font-weight: 700;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+::-webkit-scrollbar {
+  width: 7px; /* ширина нового скроллбара */
+}
+::-webkit-scrollbar-thumb {
+  background: $first-color; /* цвет фона у дорожки */
+  border-radius: 8px; /* скругление углов */
+  border: 10px; /* толщина, стиль и цвет рамки */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $first-color-no-gradient; /* цвет фона у дорожки */
+}
+p,li, ul{
+  padding: 0;
+  margin: 0;
+  &.p1{
+    font-size: 24px;
+  }
+  &.p2{
+    font-size: 20px;
+  }
+  &.p3{
+    font-size: 18px;
+  }
+  &.p4{
+    font-size: 16px;
+  }
+  &.p5{
+    font-size: 14px;
+  }
+  &.p6{
+    font-size: 12px;
+  }
+  @media (max-width: 900px) {
+    &.p1{
+      font-size: 21px;
+    }
+    &.p2{
+      font-size: 17px;
+    }
+    &.p3{
+      font-size: 15px;
+    }
+    &.p4{
+      font-size: 14px;
+    }
+    &.p5{
+      font-size: 13px;
+    }
+    &.p6{
+      font-size: 12px;
+    }
+  }
+}
+.light{
+  font-weight: 300;
+}
+.regular{
+  font-weight: 400;
+}
+.medium{
+  font-weight: 500;
+}
+.semibold{
+  font-weight: 600;
+}
+a{
+  color: $first-color-no-gradient ;
+  text-decoration: none;
+  &:hover{
+    color: $black-color;
+    opacity: 0.9;
+  }
+}
+
+.my-form{
+  position: relative;
+  input, textarea,select{
+    background: $molochniy ;
+    border: 2px solid $first-color-no-gradient;
+    border-image: $first-color ;
+    border-image-slice: 1 ;
+    padding: .375rem .75rem;
+    border-radius: 0;
+    &:focus{
+      outline: none ;
+      border: 2px solid $secondary-color-no-gradient;
+      border-image: $secondary-color ;
+      border-image-slice: 1 ;
+      border-radius: 0;
+      box-shadow: 1px 1px 2px 0 $secondary-color;
+    }
+  }
+  input:focus ~ label, textarea:focus ~ label,
+  input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label{
+    top: -10px;
+    background: $molochniy;
+    padding: 0 4px;
+    left: 10px;
+    opacity: 1;
+  }
+  input:focus ~ label, textarea:focus ~ label{
+    color: $secondary-color-no-gradient;
+  }
+
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: $first-color-no-gradient;
+    cursor: text;
+    transition: all 0.3s;
+    opacity: 0.5;
+  }
+  &.red{
+    select{
+      padding: 12px;
+      background: $secondary-color;
+      color: $molochniy;
+      font-size: 18px;
+      option{
+        background: $secondary-color;
+        color: $molochniy;
+        padding: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.my-btn {
+  padding: 5px 30px;
+  text-align: center;
+
+  span{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+  }
+  @media (max-width: 900px) {
+    padding: 3px 20px;
+
+    span{
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+  &.type-1{
+    span{
+      background: $secondary-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: $secondary-color-no-gradient;
+    }
+    background: $molochniy;
+    border: 2px solid $secondary-color-no-gradient;
+    border-image: $secondary-color;
+    border-image-slice: 1;
+    &:hover{
+      span{
+        background: $first-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $first-color-no-gradient;
+      }
+      border: 2px solid $first-color-no-gradient;
+      border-image: $first-color;
+      border-image-slice: 1;
+    }
+
+  }
+  &.type-1-blue{
+    span{
+      &,*{
+        background: $first-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $first-color-no-gradient;
+      }
+
+    }
+    background: $molochniy;
+    border: 2px solid $first-color-no-gradient;
+    border-image: $first-color;
+    border-image-slice: 1;
+    &:hover{
+      span{
+        &,*{
+        background: $secondary-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $secondary-color-no-gradient;
+        }
+      }
+      border: 2px solid $secondary-color-no-gradient;
+      border-image: $secondary-color;
+      border-image-slice: 1;
+    }
+
+  }
+  &.type-2{
+    span{
+      background: $secondary-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: $secondary-color-no-gradient;
+    }
+    background: $first-color;
+    border: 2px solid $secondary-color-no-gradient;
+    border-image: $secondary-color;
+    border-image-slice: 1;
+    &:hover{
+      span{
+        background: $molochniy;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $molochniy;
+      }
+      border: 2px solid $molochniy;
+    }
+
+  }
+  &.type-3{
+    span{
+      color: $black-color;
+    }
+    background: $secondary-color;
+    border: 2px solid $black-color;
+    &:hover{
+      span{
+        color: $molochniy;
+      }
+      border: 2px solid $molochniy;
+    }
+
+  }
+  &.type-4{
+    span{
+
+      color: $molochniy;
+    }
+    background: $secondary-color;
+    border: 2px solid $secondary-color-no-gradient;
+    border-image: $secondary-color;
+    border-image-slice: 1;
+    &:hover{
+      background: $molochniy;
+      span{
+        &,*{
+          background: $secondary-color;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: $secondary-color-no-gradient;
+        }
+
+      }
+      border: 2px solid $secondary-color-no-gradient;
+      border-image: $secondary-color;
+      border-image-slice: 1;
+    }
+
+  }
+  &.type-5{
+    span{
+      color: $molochniy;
+    }
+    background: $first-color;
+    border: 2px solid $first-color-no-gradient;
+    border-image: $first-color;
+    border-image-slice: 1;
+    &:hover{
+      background: $molochniy;
+      span{
+        background: $first-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $first-color-no-gradient;
+      }
+      border: 2px solid $first-color-no-gradient;
+      border-image: $first-color;
+      border-image-slice: 1;
+    }
+
+  }
+
+
+  &.disabled{
+    opacity: 0.7;
+  }
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  background: $bejeviy;
+  color: $black-color;
+}
+.btn-primary{
+  background-color: #4582af;
+  border-color: #4582af;
+}
+.text-primary{
+  color: #4582af !important;
+}
+.btn-primary:hover{
+  background-color: #7db1d1;
+  border-color: #7db1d1;
+}
+.stats .react-date-picker__wrapper{
+  border-radius: 10px;
+  color: #6da3bd;
+  border-width: 3px;
+  border-color: #000;
+}
+
+.content{
+  border: 1px solid transparent;
+  margin-top: 25px;
+  border-radius: 4px;
+  box-shadow: 0 .005em .01em 0 rgba(0,0,0,.12),0 2px 10px 0 rgba(0,0,0,.12);
+  transition: .2s opacity;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+.css-vdrxxn-control{
+  border-radius: 0 !important;
+}

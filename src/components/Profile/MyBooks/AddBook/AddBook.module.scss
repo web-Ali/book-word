@@ -1,0 +1,51 @@
+@import '../../../../styles/colors';
+
+.wrapper{
+    min-height: 700px;
+}
+.tagsCont{
+    position: relative;
+}
+.tagslist{
+    display: block;
+    position: absolute;
+    border: 1px solid $first-color-no-gradient;
+    background: $secondary-color;
+    z-index: 5;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+.addNewTag{
+    font-weight: bold;
+}
+.tagslistitem{
+    padding: 10px;
+    border-bottom: 1px solid $first-color-no-gradient;
+    color: $molochniy;
+}
+.tagslistitem:hover{
+    background: $secondary-color-no-gradient;
+
+}
+.tagsTarget{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+.tagsTarget div{
+    color: $first-color-no-gradient;
+    padding: 2px 7px 5px 7px;
+    border: 1px solid $first-color-no-gradient;
+    margin-right: 5px;
+}
+.tagsTarget div i{
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: 2px;
+}
+.tagsTarget div i:hover{
+    cursor: pointer;
+    color: $black-color;
+}

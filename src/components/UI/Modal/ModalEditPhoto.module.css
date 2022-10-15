@@ -1,0 +1,32 @@
+.ModalPhotoEdit{
+    text-align: center;
+    min-height: 300px;
+}
+.ModalPhotoEdit img {
+    object-fit:cover;
+    width: 176px;
+    height: 260px;
+    border: 1px solid #cecece;
+    cursor: pointer;
+}
+.ModalPhotoEdit.ModalProfilePhotoEdit img {
+
+    width: 200px;
+    height: 200px;
+
+}
+.ModalPhotoEdit.ModalBackgroundPhotoEdit img {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 400px;
+    height: 100px;
+
+}
+
+.ModalPhotoEdit button {
+
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}

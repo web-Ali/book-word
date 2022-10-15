@@ -1,0 +1,26 @@
+@import '../../styles/colors';
+
+.footerWrapper{
+    background: $first-color;
+    h6{
+        color: $bejeviy;
+    }
+
+    padding-bottom: 70px;
+}
+
+.footerWrapper ul{
+    padding: 0;
+}
+.footerWrapper {
+    li, a{
+        color: $bejeviy;
+        list-style-type: none;
+    }
+
+}
+.footerWrapper a:hover{
+    color: $secondary-color-no-gradient;
+
+
+}

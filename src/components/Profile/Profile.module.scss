@@ -1,0 +1,148 @@
+@import '../../styles/colors';
+
+.profImg{
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    margin-top: -50px;
+    width: 100%;
+}
+.profImg img{
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.profImg:hover .photoEdit{
+    display: block;
+}
+.photoEdit{
+    display: none;
+    position: absolute;
+    opacity: 0.9;
+    width: 100%;
+}
+.photoEdit button{
+    font-size: 14px;
+    width: 100%;
+
+}
+.coverBg{
+
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
+    padding-left: 20px;
+    position: relative;
+}
+.coverBg:hover .bgImage{
+    display: block;
+}
+.bgImage{
+    position: absolute;
+    display: none;
+    right: 30px;
+    top: 30px;
+}
+.userStats{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 10px;
+    div{
+        font-style: italic;
+        padding-left: 15px;
+        font-size: 18px;
+        &:nth-child(3){
+            margin-left: -6px;
+        }
+    }
+
+}
+.balance{
+    padding-top: 30px;
+    .title{
+        text-align: center;
+        p{
+            color: $first-color
+        }
+    }
+}
+.nav{
+    border-top: 2px solid $first-color-no-gradient;
+    border-bottom: 2px solid $first-color-no-gradient;
+    border-image: $first-color;
+    border-image-slice: 1;
+    background-color: $bejeviy;
+    margin: 0;
+}
+
+.navList li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+.navList li a{
+    text-decoration: none;
+    color: #000;
+    padding: 12px;
+    display: inline-block;
+
+}
+.navList li a:hover{
+    color: #4582af;
+}
+.tabs{
+    display: flex;
+    margin-top: 5px;
+    justify-content: start;
+    padding: 0;
+}
+.tabs li{
+    list-style: none;
+
+}
+.tabs li a{
+    cursor: pointer;
+    display: inline-block;
+    color: #495057;
+    padding: 10px;
+
+}
+.tabs li a:hover{
+    color: #000;
+
+}
+.tabs li a.active{
+    border-top: 2px solid $first-color-no-gradient;
+    border-image: $first-color;
+    border-image-slice: 1;
+    color: #000;
+}
+.comments{
+    margin-top: 120px;
+}
+
+@media screen and (max-width: 576px) {
+
+
+    .tabs{
+        flex-direction: column;
+    }
+    .tabs li{
+        text-align: center;
+        width: 100%;
+    }
+    .tabs li a{
+        width: 100%;
+    }
+    .tabs li a.active{
+        color: $molochniy;
+        font-weight: bold;
+        background: $first-color;
+    }
+}

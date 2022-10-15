@@ -1,0 +1,37 @@
+@import '../../../styles/colors';
+.imgCont{
+    height: 0;
+
+    padding-bottom: 120%;
+    position: relative;
+    width: 100%;
+
+    border-radius: 30px;
+}
+.img{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.nav{
+    padding-top: 20px;
+    li{
+        button{
+
+        }
+        &.active{
+            button{
+                background: $molochniy !important;
+            }
+
+        }
+    }
+}

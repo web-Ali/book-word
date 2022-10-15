@@ -1,0 +1,53 @@
+@import '../../styles/colors';
+
+.img img{
+    border-radius: 41px;
+    width: 70px;
+    object-fit: cover;
+    height: 70px;
+}
+.title{
+    font-size: 27px;
+}
+.theme{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.content{
+    background-color: #fff;
+    border: 1px solid transparent;
+    margin-top: 25px;
+    border-radius: 4px;
+    box-shadow: 0 .005em .01em 0 rgba(0,0,0,.12),0 2px 10px 0 rgba(0,0,0,.12);
+    transition: .2s opacity;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+.arrow{
+    color: $secondary-color-no-gradient;
+}
+.back{
+    margin-left: 41px;
+&::before{
+     content: '';
+     position: absolute;
+     left: 3px;
+     top: 12px;
+
+     width: 40px;
+     background: $secondary-color;
+     height: 1px;
+ }
+a{
+    color: $black-color;
+}
+}
+@media screen and (max-width: 576px) {
+    .img{
+        width: 50px;
+        height: 50px;
+    }
+    .img img{
+        height: 50px;
+    }
+}
